@@ -18,11 +18,11 @@ public class Student {
     @EqualsAndHashCode.Include
     private Integer idStudent;
 
-    @Column(nullable = false)
-    private String first_name;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
 
-    @Column(nullable = false)
-    private String last_name;
+    @Column(name = "last_name",nullable = false)
+    private String lastName;
 
     @Column(name = "dni", nullable = false)
     private String DNI;

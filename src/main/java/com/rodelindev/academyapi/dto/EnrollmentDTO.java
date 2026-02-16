@@ -1,7 +1,7 @@
 package com.rodelindev.academyapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.rodelindev.academyapi.model.EnrollmentDetail;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.rodelindev.academyapi.model.Student;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,7 +26,8 @@ public class EnrollmentDTO {
     private Student student;
 
     @NonNull
-    private List<EnrollmentDetail> details;
+    @JsonManagedReference
+    private List<EnrollmentDetailDTO> details;
 
     @NonNull
     private Boolean enabled;
