@@ -32,7 +32,7 @@ public class StudentController {
         return ResponseEntity.ok(list);
     }
 
-    @GetMapping("/students/age/desc")
+    @GetMapping("/age/desc")
     public ResponseEntity<List<StudentDTO>> getStudentsDesc() throws Exception {
         var list = service.findAllStudentsDesc()
                 .stream()
