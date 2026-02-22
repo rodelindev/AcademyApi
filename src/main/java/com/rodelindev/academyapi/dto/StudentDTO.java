@@ -6,7 +6,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 @Data
 @AllArgsConstructor
@@ -21,11 +20,11 @@ public class StudentDTO {
     private String firstName;
 
     @NotNull
-    @JsonProperty( value = "last_name")
+    @JsonProperty(value = "last_name")
     private String lastName;
 
     @NotNull
-    @JsonProperty( value = "dni")
+    @JsonProperty(value = "dni")
     private String DNI;
 
     @NotNull
