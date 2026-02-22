@@ -1,12 +1,13 @@
 package com.rodelindev.academyapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.rodelindev.academyapi.model.Student;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -19,16 +20,16 @@ public class EnrollmentDTO {
 
     private Integer idEnrollment;
 
-    @NonNull
+    @NotNull
     private LocalDateTime enrollmentDate;
 
-    @NonNull
+    @NotNull
     private Student student;
 
-    @NonNull
+    @NotNull
+    private Boolean enabled;
+
+    @NotNull
     @JsonManagedReference
     private List<EnrollmentDetailDTO> details;
-
-    @NonNull
-    private Boolean enabled;
 }

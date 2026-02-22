@@ -1,6 +1,7 @@
 package com.rodelindev.academyapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,12 +15,12 @@ public class CourseDTO {
 
     private Integer idCourse;
 
-    @NonNull
+    @NotNull
     private String name;
 
-    @NonNull
+    @NotNull
     private String acronym;
 
-    @NonNull
+    @NotNull
     private Boolean enabled;
 }

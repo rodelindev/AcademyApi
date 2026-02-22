@@ -2,8 +2,10 @@ package com.rodelindev.academyapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import com.rodelindev.academyapi.model.Course;
 import com.rodelindev.academyapi.model.Enrollment;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,14 +18,11 @@ import lombok.NonNull;
 public class EnrollmentDetailDTO {
 
     @JsonBackReference
-    private Integer idEnrollmentDetail;
+    private EnrollmentDTO Enrollment;
 
-    @NonNull
-    private Course course;
+    @NotNull
+    private CourseDTO course;
 
-    @NonNull
-    private Enrollment enrollment;
-
-    @NonNull
+    @NotNull
     private String classroom;
 }

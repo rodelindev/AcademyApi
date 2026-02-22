@@ -2,6 +2,7 @@ package com.rodelindev.academyapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,19 +16,18 @@ public class StudentDTO {
 
     private Integer idStudent;
 
-    @NonNull
+    @NotNull
     @JsonProperty(value = "first_name")
-
     private String firstName;
 
-    @NonNull
+    @NotNull
     @JsonProperty( value = "last_name")
     private String lastName;
 
-    @NonNull
+    @NotNull
     @JsonProperty( value = "dni")
     private String DNI;
 
-    @NonNull
+    @NotNull
     private Integer age;
 }

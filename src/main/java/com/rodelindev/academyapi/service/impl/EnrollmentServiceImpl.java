@@ -26,7 +26,7 @@ public class EnrollmentServiceImpl extends CrudImpl<Enrollment, Integer> impleme
 
     @Override
     public Enrollment save(Enrollment enrollment) throws Exception {
-        //enrollment.getDetails().forEach(details -> details.setCourse(enrollment));
+        enrollment.getDetails().forEach(details -> details.setEnrollment(enrollment));
         return repository.save(enrollment);
     }
 

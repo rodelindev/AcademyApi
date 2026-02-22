@@ -21,15 +21,16 @@ public class Enrollment {
     @EqualsAndHashCode.Include
     private Integer idEnrollment;
 
+    @Column(nullable = false)
     private LocalDateTime enrollmentDate;
 
     @ManyToOne
     @JoinColumn(name = "id_student", nullable = false, foreignKey = @ForeignKey(name = "fk_enrollment_student"))
     private Student student;
 
-    @OneToMany(mappedBy = "enrollment", cascade = CascadeType.ALL)
-    private List<EnrollmentDetail> details;
-
     @Column(nullable = false)
     private Boolean enabled;
+
+    @OneToMany(mappedBy = "enrollment", cascade = CascadeType.ALL)
+    private List<EnrollmentDetail> details;
 }
