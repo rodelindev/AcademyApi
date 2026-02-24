@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/students")
 @RequiredArgsConstructor
+@RequestMapping("/v1/students")
 public class StudentController {
 
     private final IStudentService service;

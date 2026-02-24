@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/v1/enrollments")
 @RequiredArgsConstructor
+@RequestMapping("/v1/enrollments")
 public class EnrollmentController {
 
     private final IEnrollmentService service;
