@@ -50,7 +50,7 @@ public class CourseController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<CourseDTO> delete(@PathVariable Integer id) throws Exception {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) throws Exception {
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
