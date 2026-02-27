@@ -1,9 +1,7 @@
 package com.rodelindev.academyapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.rodelindev.academyapi.model.Student;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +22,7 @@ public class EnrollmentDTO {
     private LocalDateTime enrollmentDate;
 
     @NotNull
-    private Student student;
+    private StudentDTO student;
 
     @NotNull
     private Boolean enabled;
