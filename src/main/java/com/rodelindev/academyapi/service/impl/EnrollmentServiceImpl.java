@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.mapping;
 
 @Service
 @RequiredArgsConstructor
@@ -38,7 +39,7 @@ public class EnrollmentServiceImpl extends CrudImpl<Enrollment, Integer> impleme
                 .collect(
                         groupingBy(
                                 detail -> detail.getCourse().getName(),
-                                Collectors.mapping(
+                                mapping(
                                         detail -> detail.getEnrollment().getStudent().getFirstName() + " " +
                                                 detail.getEnrollment().getStudent().getLastName(),
                                         Collectors.toList()
